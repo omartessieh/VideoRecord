@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <!-- Display camera video -->
+    <video #videoElement width="640" height="480"></video>
+  </div>
+  <div>
+    <button (click)="startRecording()" [disabled]="recording">Start Recording</button>
+    <button (click)="stopRecording()" [disabled]="!recording">Stop Recording</button>
+  </div>
+  <div>
+    <!-- Display recorded video -->
+    <video #recordedVideoElement width="640" height="480" controls></video>
+  </div>
+
+  <!-- <div>
+    <button (click)="downloadRecordedVideo()">Download Recorded Video</button>
+  </div> -->
+</ion-content>
